@@ -239,7 +239,17 @@
 
     function loadProject(name) {
       currentProject = name;
-      const code = localStorage.getItem(`project:${name}`) || '<!DOCTYPE html>\n<html>\n  <head><title></title></head>\n  <body></body>\n</html>';
+      const code = localStorage.getItem(`project:${name}`) || '<!DOCTYPE html>/n
+<html lang="en">/n
+<head>/n
+<meta charset="UTF-8">/n
+<meta name="viewport" content="width=device-width, initial-scale=1.0">/n
+<meta http-equiv="X-UA-Compatible" content="ie=edge">/n
+<title></title>/n
+</head>/n
+<body>/n
+</body>/n
+</html>'
       document.getElementById('home-screen').style.display = 'none';
       document.getElementById('ide').style.display = 'flex';
       document.getElementById('project-title').textContent = name;
